@@ -13,12 +13,12 @@ class ViewController: UIViewController {
     
     private let titles = [[
             "America",
-            "Bangladesh",
+            "Bangladesh Bangladesh Bangladesh Bangladesh BangladeshBangladesh Bangladesh BangladeshBangladesh Bangladesh",
             "China",
             "Denmark",
             "Egypt",
-            "Finland",
-            "Germany",
+            "Finland Finland",
+            "Germany 123",
             "Holand",
             "Italy",
             "Japan"
@@ -54,6 +54,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
                                                                 return TagCollectionViewCell()
         }
         cell.tagLabel.text = titles[indexPath.section][indexPath.row]
+        cell.tagLabel.preferredMaxLayoutWidth = collectionView.frame.width - 32
         return cell
     }
     
