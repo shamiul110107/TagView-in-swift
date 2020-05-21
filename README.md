@@ -2,5 +2,4 @@
 
 A simple tag view in swift using collectionview.
 
-<img src = "IMG_D14C5976AC2B-1.jpeg" width="320" height="500">
-<img src = "222.jpeg" width="320" height="500">
+<img src = "222.png" width="320" height="500">
