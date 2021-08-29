@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XY5-ij-KMx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XY5-ij-KMx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,8 +19,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="v2Y-zx-yuJ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="8" y="88" width="398" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B9F-uD-gBf">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
@@ -27,14 +29,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TagCollectionViewCell" id="Veo-oB-lmH" customClass="TagCollectionViewCell" customModule="BSTagView" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="62" height="40"/>
+                                        <rect key="frame" x="0.0" y="50" width="86.5" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sfC-4f-Wuu">
-                                            <rect key="frame" x="0.0" y="0.0" width="62" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="86.5" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zey-RC-YiT">
-                                                    <rect key="frame" x="10" y="0.0" width="42" height="40"/>
+                                                    <rect key="frame" x="10" y="0.0" width="41.5" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="tEn-gC-m4V"/>
                                                     </constraints>
@@ -42,25 +44,38 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWe-3o-uqh" customClass="CustomButton" customModule="BSTagView" customModuleProvider="target">
+                                                    <rect key="frame" x="56.5" y="0.0" width="30" height="40"/>
+                                                    <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="SDH-Ei-vKK"/>
+                                                        <constraint firstAttribute="height" constant="40" id="kKS-Uj-n54"/>
+                                                    </constraints>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" image="trash.circle.fill" catalog="system"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Zey-RC-YiT" firstAttribute="top" secondItem="sfC-4f-Wuu" secondAttribute="top" id="EgM-jq-sZ7"/>
                                                 <constraint firstItem="Zey-RC-YiT" firstAttribute="leading" secondItem="sfC-4f-Wuu" secondAttribute="leading" constant="10" id="F9U-55-JAc"/>
-                                                <constraint firstAttribute="trailing" secondItem="Zey-RC-YiT" secondAttribute="trailing" constant="10" id="TiM-Oy-s54"/>
+                                                <constraint firstItem="lWe-3o-uqh" firstAttribute="leading" secondItem="Zey-RC-YiT" secondAttribute="trailing" constant="5" id="HTN-ke-7iI"/>
+                                                <constraint firstItem="lWe-3o-uqh" firstAttribute="centerY" secondItem="sfC-4f-Wuu" secondAttribute="centerY" id="Jsk-gQ-ItF"/>
+                                                <constraint firstAttribute="trailing" secondItem="lWe-3o-uqh" secondAttribute="trailing" id="eH8-Qc-gHp"/>
                                                 <constraint firstAttribute="bottom" secondItem="Zey-RC-YiT" secondAttribute="bottom" id="nxW-rg-S6q"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
+                                            <outlet property="deleteButton" destination="lWe-3o-uqh" id="99x-ew-dcV"/>
                                             <outlet property="tagLabel" destination="Zey-RC-YiT" id="TQD-UV-TzU"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="TagCollectionReusableView" id="hl9-qB-1rp" customClass="TagCollectionReusableView" customModule="BSTagView" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="398" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9N-9g-5CQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="50"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -78,14 +93,14 @@
                                 </collectionReusableView>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v2Y-zx-yuJ" secondAttribute="trailing" id="30Q-Y7-ruj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v2Y-zx-yuJ" secondAttribute="trailing" constant="8" id="30Q-Y7-ruj"/>
                             <constraint firstItem="v2Y-zx-yuJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FhC-px-h4I"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="v2Y-zx-yuJ" secondAttribute="bottom" id="rIq-bd-5If"/>
-                            <constraint firstItem="v2Y-zx-yuJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sZ5-TF-AgX"/>
+                            <constraint firstItem="v2Y-zx-yuJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="sZ5-TF-AgX"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="BSTagView" id="0hz-0Y-qux"/>
                     <connections>
@@ -115,4 +130,13 @@
             <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="trash.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
